@@ -1,0 +1,23 @@
+/* CSS reset */
+*, *:after, *:before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+button{
+    cursor: pointer;
+    outline: none;
+}
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+li{
+    list-style: none;
+}
+/* ------------ */

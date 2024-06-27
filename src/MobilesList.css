@@ -1,0 +1,37 @@
+.mobileContainer{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 340px);
+    gap: 2rem 10px;
+    padding: 10px;
+}
+.card{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: min(384, 100%);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.card img{
+    width: 100px;
+}
+.card div{
+    display: grid;
+    justify-items: start;
+    gap: 10px;
+}
+@media (max-width: 768px){
+    .mobileContainer{
+        grid-template-columns: repeat(1, 384px);
+    }
+}
+.title{
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
