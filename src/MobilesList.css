@@ -1,7 +1,7 @@
 .mobileContainer{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 340px);
+    grid-template-columns: repeat(2, 300px);
     gap: 2rem 10px;
     padding: 10px;
 }
@@ -18,14 +18,17 @@
 .card img{
     width: 100px;
 }
-.card div{
+.card .mobile{
     display: grid;
     justify-items: start;
     gap: 10px;
 }
-@media (max-width: 768px){
+.add-to-cart{
+    padding: 4px 8px;
+}
+@media (max-width: 568px){
     .mobileContainer{
-        grid-template-columns: repeat(1, 384px);
+        grid-template-columns: repeat(1, 96%);
     }
 }
 .title{
@@ -34,4 +37,11 @@
     padding: 10px;
     font-size: 25px;
     font-weight: bold;
+}
+.cart-options{
+    display: flex;
+    gap: 10px;
+}
+.cart-options button{
+    padding: 0 4px;
 }

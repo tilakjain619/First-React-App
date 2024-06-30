@@ -1,20 +1,24 @@
 [
     {
+        "id": 1,
         "name": "Poco M6 Pro",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/d/h/q/m6-pro-5g-mzb0eprin-poco-original-imags3e7vewsafst.jpeg?q=70",
         "price": "9,999"
     },
     {
+        "id": 2,
         "name": "Vivo T2x 5G",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/k/u/n/-original-imagzjhwtfthcmzz.jpeg?q=70",
         "price": "12,999"
     },
     {
+        "id": 3,
         "name": "Realme C51",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/i/w/-original-imagzk4mfg6zf2fv.jpeg?q=70",
         "price": "8,999"
     },
     {
+        "id": 4,
         "name": "Apple iPhone 15",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70",
         "price": "69,999"
