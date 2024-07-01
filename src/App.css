@@ -1,3 +1,7 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 /* CSS reset */
 *, *:after, *:before{
     padding: 0;
@@ -10,7 +14,7 @@ button{
     cursor: pointer;
     outline: none;
 }
-input{
+input, textarea{
     outline: none;
 }
 a{

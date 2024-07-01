@@ -30,7 +30,12 @@
     .mobileContainer{
         grid-template-columns: repeat(1, 96%);
     }
+    .card{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
+
 .title{
     margin: 10px;
     text-align: center;
