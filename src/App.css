@@ -14,7 +14,7 @@ button{
     cursor: pointer;
     outline: none;
 }
-input, textarea{
+input, textarea, select, option{
     outline: none;
 }
 a{
