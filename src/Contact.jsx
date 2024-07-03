@@ -1,21 +1,33 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 import { useForm } from 'react-hook-form';
 const Contact = () => {
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
-    watch
+    formState: { errors }
   } = useForm()
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = () => submitForm();
 
+  const scriptUrl = "https://script.google.com/macros/s/AKfycbw-Dqe7aSb5QLzbpALAFY8YZ1n76vDrujAQNqSS3-lV6y1DhJWNOE-cKtS0ylS7lholAA/exec"
+  const formRef = useRef(null)
 
+  function submitForm() {
+    const headers = {'Content-Type':'application/json',
+      'Access-Control-Allow-Origin':'*',
+      'Access-Control-Allow-Methods':'POST'}
+
+    fetch(scriptUrl, { method: 'POST', headers: headers, body: new FormData(formRef.current) })
+      .then(res => {
+        console.log("SUCCESSFULLY SUBMITTED")
+      })
+      .catch(err => console.log(err))
+  }
   return (
     <div className='container mx-auto my-4 px-4'>
       <h1 className="text-lg font-bold">Contact us</h1>
-      <form action="" onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
+      <form action="" onSubmit={handleSubmit(onSubmit)} className='flex flex-col' ref={formRef} name="google-sheet">
         <label htmlFor="name" className='mt-4'>Name:</label>
         <input {...register("name", { required: "Name is required" })} type="text" name='name' className='border-2 border-slate-300 px-2 py-2 rounded-md mt-2' />
         {errors.name && <p className='text-red-600 text-sm pt-2'>{errors.name.message}</p>}
@@ -35,7 +47,7 @@ const Contact = () => {
         {errors.subject && <p className='text-red-600 text-sm pt-2'>{errors.subject.message}</p>}
 
         <label htmlFor="userMessage" className='mt-4'>Your message:</label>
-        <textarea {...register("userMessage", { required: "Message is empty", minLength: {value: 5, message: "Message is too short"}})} name="userMessage" className='border-2 border-slate-300 px-2 py-2 rounded-md mt-2'></textarea>
+        <textarea {...register("userMessage", { required: "Message is empty", minLength: { value: 5, message: "Message is too short" } })} name="userMessage" className='border-2 border-slate-300 px-2 py-2 rounded-md mt-2'></textarea>
         {errors.userMessage && <p className='text-red-600 text-sm pt-2'>{errors.userMessage.message}</p>}
         <button type='submit' className='px-10 py-2 bg-orange-500 w-fit text-white mx-auto mt-4 rounded-md hover:bg-orange-700'>Send</button>
       </form>
