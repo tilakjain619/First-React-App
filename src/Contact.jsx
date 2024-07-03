@@ -1,5 +1,6 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { useForm } from 'react-hook-form';
+import { json } from 'react-router-dom';
 const Contact = () => {
 
   const {
@@ -8,26 +9,29 @@ const Contact = () => {
     formState: { errors }
   } = useForm()
 
-  const onSubmit = () => submitForm();
+  const onSubmit = (data) => fetch('https://api.sheetmonkey.io/form/paj5pkqZ69NM8FACwKzSgi', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: { 'Content-Type': 'application/json' } // add this header to specify the request body format
+  }).then(() => {
+    console.log('submitted');
+  })
+  // function submitForm() {
+  //   const headers = {'Content-Type':'application/json',
+  //     'Access-Control-Allow-Origin':'*',
+  //     'Access-Control-Allow-Methods':'POST'}
 
-  const scriptUrl = "https://script.google.com/macros/s/AKfycbw-Dqe7aSb5QLzbpALAFY8YZ1n76vDrujAQNqSS3-lV6y1DhJWNOE-cKtS0ylS7lholAA/exec"
-  const formRef = useRef(null)
+  //   fetch(scriptUrl, )
+  //     .then(res => {
+  //       console.log("SUCCESSFULLY SUBMITTED")
+  //     })
+  //     .catch(err => console.log(err))
+  // }
 
-  function submitForm() {
-    const headers = {'Content-Type':'application/json',
-      'Access-Control-Allow-Origin':'*',
-      'Access-Control-Allow-Methods':'POST'}
-
-    fetch(scriptUrl, { method: 'POST', headers: headers, body: new FormData(formRef.current) })
-      .then(res => {
-        console.log("SUCCESSFULLY SUBMITTED")
-      })
-      .catch(err => console.log(err))
-  }
   return (
     <div className='container mx-auto my-4 px-4'>
       <h1 className="text-lg font-bold">Contact us</h1>
-      <form action="" onSubmit={handleSubmit(onSubmit)} className='flex flex-col' ref={formRef} name="google-sheet">
+      <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
         <label htmlFor="name" className='mt-4'>Name:</label>
         <input {...register("name", { required: "Name is required" })} type="text" name='name' className='border-2 border-slate-300 px-2 py-2 rounded-md mt-2' />
         {errors.name && <p className='text-red-600 text-sm pt-2'>{errors.name.message}</p>}
