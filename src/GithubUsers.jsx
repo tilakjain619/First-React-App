@@ -31,7 +31,7 @@ const GithubUsers = () => {
     const usersToDisplay = searchInput ? searchData?.users : data.users;
 
     return (
-        <div className='p-4'>
+        <div className='container p-4 mx-auto'>
             <h2 className='text-center text-lg font-bold'>User Profiles</h2>
             <input
                 type="text"

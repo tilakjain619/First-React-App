@@ -7,8 +7,10 @@ const Footer = () => {
     <div>
         <h2>Mini Projects:</h2>
     </div>
-        <ul className='flex flex-col gap-1 text-gray-300 text-sm items-center'>
+        <ul className='flex flex-col gap-1 text-gray-300 text-sm'>
             <li><Link to="/github-users">Github users</Link></li>
+            <li><Link to="/bmi-calculator">BMI Calculator</Link></li>
+            <li><Link to="/calculator">Calculator</Link></li>
         </ul>
    </footer>
   )

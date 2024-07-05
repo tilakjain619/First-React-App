@@ -7,6 +7,8 @@ import Navbar from './Navbar'
 import GithubUsers from './GithubUsers'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Footer from './Footer'
+import Calculator from './Calculator'
+import BMICalculator from './BMICalculator'
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,6 +18,8 @@ const App = () => {
       <Route path="/about" element={<About/>}></Route>
       <Route path="/contact" element={<Contact/>}></Route>
       <Route path="/github-users" element={<GithubUsers/>}></Route>
+      <Route path="/bmi-calculator" element={<BMICalculator/>}></Route>
+      <Route path="/calculator" element={<Calculator/>}></Route>
     </Routes>
     <Footer/>
     </BrowserRouter>
