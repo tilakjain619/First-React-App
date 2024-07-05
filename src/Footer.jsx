@@ -11,6 +11,7 @@ const Footer = () => {
             <li><Link to="/github-users">Github users</Link></li>
             <li><Link to="/bmi-calculator">BMI Calculator</Link></li>
             <li><Link to="/calculator">Calculator</Link></li>
+            <li><Link to="/expense-tracker">Expense Tracker</Link></li>
         </ul>
    </footer>
   )

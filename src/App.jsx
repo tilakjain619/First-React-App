@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Footer from './Footer'
 import Calculator from './Calculator'
 import BMICalculator from './BMICalculator'
+import ExpenseTracker from './ExpenseTracker'
 const App = () => {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ const App = () => {
       <Route path="/github-users" element={<GithubUsers/>}></Route>
       <Route path="/bmi-calculator" element={<BMICalculator/>}></Route>
       <Route path="/calculator" element={<Calculator/>}></Route>
+      <Route path="/expense-tracker" element={<ExpenseTracker/>}></Route>
     </Routes>
     <Footer/>
     </BrowserRouter>
