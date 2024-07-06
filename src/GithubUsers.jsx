@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useFetchData from './useFetchData';
-
+import Loader from './Loader';
 const GithubUsers = () => {
     const [searchInput, setSearchInput] = useState("");
     const [searchData, setSearchData] = useState(null);
@@ -25,13 +25,13 @@ const GithubUsers = () => {
         return <div>Error: {error.message}</div>;
     }
     if (!data) {
-        return <div className="mx-auto border-gray-300 h-10 w-10 animate-spin rounded-full border-4 border-t-purple-600" />; // or a loading spinner, etc.
+        return <Loader/>
     }
 
     const usersToDisplay = searchInput ? searchData?.users : data.users;
 
     return (
-        <div className='container p-4 mx-auto'>
+        <div className='container p-4 mx-auto min-h-[90vh]'>
             <h2 className='text-center text-lg font-bold'>User Profiles</h2>
             <input
                 type="text"

@@ -2,25 +2,49 @@
     {
         "id": 1,
         "name": "Poco M6 Pro",
+        "category": "mobile",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/d/h/q/m6-pro-5g-mzb0eprin-poco-original-imags3e7vewsafst.jpeg?q=70",
-        "price": "9999"
+        "price": "9999",
+        "quantity": 1
     },
     {
         "id": 2,
         "name": "Vivo T2x 5G",
+        "category": "mobile",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/k/u/n/-original-imagzjhwtfthcmzz.jpeg?q=70",
-        "price": "12999"
+        "price": "12999",
+        "quantity": 1
     },
     {
         "id": 3,
         "name": "Realme C51",
+        "category": "mobile",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/i/w/-original-imagzk4mfg6zf2fv.jpeg?q=70",
-        "price": "8999"
+        "price": "8999",
+        "quantity": 1
     },
     {
         "id": 4,
         "name": "Apple iPhone 15",
+        "category": "mobile",
         "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70",
-        "price": "69999"
+        "price": "69999",
+        "quantity": 1
+    },
+    {
+        "id": 5,
+        "name": "Puma Kinta",
+        "category": "shoes",
+        "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/6/s/t/5-394620-5-puma-white-team-aqua-silver-sky-original-imahfpnhaxcxsqdp.jpeg?q=70",
+        "price": "1900",
+        "quantity": 1
+    },
+    {
+        "id": 6,
+        "name": "Puma Rungryp",
+        "category": "shoes",
+        "image": "https://rukminim2.flixcart.com/image/416/416/xif0q/shoe/w/l/t/6-397173-6-puma-warm-white-red-racing-blue-original-imagwhg8wbrcx25z.jpeg?q=70&crop=false",
+        "price": "2100",
+        "quantity": 1
     }
 ]

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 const Contact = () => {
 
@@ -7,28 +7,18 @@ const Contact = () => {
     handleSubmit,
     formState: { errors }
   } = useForm()
-
+  
+  const [submitted, setSubmitted] = useState(false);
   const onSubmit = (data) => fetch('https://api.sheetmonkey.io/form/paj5pkqZ69NM8FACwKzSgi', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: { 'Content-Type': 'application/json' } // add this header to specify the request body format
   }).then(() => {
-    console.log('submitted');
+    console.log("Thanks for your message");
+      setSubmitted(true);
   })
-  // function submitForm() {
-  //   const headers = {'Content-Type':'application/json',
-  //     'Access-Control-Allow-Origin':'*',
-  //     'Access-Control-Allow-Methods':'POST'}
-
-  //   fetch(scriptUrl, )
-  //     .then(res => {
-  //       console.log("SUCCESSFULLY SUBMITTED")
-  //     })
-  //     .catch(err => console.log(err))
-  // }
-
   return (
-    <div className='container mx-auto my-4 px-4'>
+    <div className='container mx-auto my-4 px-4 max-w-[600px] min-h-[73vh]'>
       <h1 className="text-lg font-bold">Contact us</h1>
       <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
         <label htmlFor="name" className='mt-4'>Name:</label>
@@ -52,6 +42,7 @@ const Contact = () => {
         <label htmlFor="userMessage" className='mt-4'>Your message:</label>
         <textarea {...register("userMessage", { required: "Message is empty", minLength: { value: 5, message: "Message is too short" } })} name="userMessage" className='border-2 border-slate-300 px-2 py-2 rounded-md mt-2'></textarea>
         {errors.userMessage && <p className='text-red-600 text-sm pt-2'>{errors.userMessage.message}</p>}
+        {submitted && <p className='mt-4 text-center bg-green-400 p-2 rounded-md'>Thanks for messaging!</p>}
         <button type='submit' className='px-10 py-2 bg-orange-500 w-fit text-white mx-auto mt-4 rounded-md hover:bg-orange-700'>Send</button>
       </form>
     </div>
