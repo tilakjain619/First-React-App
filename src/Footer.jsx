@@ -12,6 +12,7 @@ const Footer = () => {
             <li><Link to="/bmi-calculator">BMI Calculator</Link></li>
             <li><Link to="/calculator">Calculator</Link></li>
             <li><Link to="/expense-tracker">Expense Tracker</Link></li>
+            <li><Link to="/todo">Todo App</Link></li>
         </ul>
    </footer>
   )
