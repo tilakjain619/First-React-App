@@ -12,6 +12,7 @@ import Calculator from './Calculator'
 import BMICalculator from './BMICalculator'
 import ExpenseTracker from './ExpenseTracker'
 import Cart from './Cart'
+import WeatherApp from './WeatherApp'
 import TodoApp from './TodoApp'
 const App = () => {
   const [progress, setProgress] = useState(0);
@@ -83,6 +84,7 @@ const App = () => {
           <Route path="/calculator" element={<Calculator/>}></Route>
           <Route path="/expense-tracker" element={<ExpenseTracker/>}></Route>
           <Route path="/todo" element={<TodoApp/>}></Route>
+          <Route path="/weather" element={<WeatherApp/>}></Route>
         </Routes>
       )}
       {warning && <div className='px-4 py-3 bg-red-600 m-2 rounded-md text-gray-200 fixed z-10 top-4 right-4'><span>ℹ️</span> Item is already present</div>}
