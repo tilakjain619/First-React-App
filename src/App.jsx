@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import LoadingBar from 'react-top-loading-bar'
 import './App.css'
 import Mobiles from './Mobiles'
 import Contact from './Contact'
@@ -13,10 +14,20 @@ import ExpenseTracker from './ExpenseTracker'
 import Cart from './Cart'
 import TodoApp from './TodoApp'
 const App = () => {
-
+  const [progress, setProgress] = useState(0);
   const [cart, setCart] = useState([]);
   const [warning, setWarning] = useState(false);
   const [showCart, setShowCart] = useState(false);
+
+  useEffect(() =>{
+    setProgress(progress + 10);
+    setTimeout(() =>{
+      setProgress(progress + 20)
+    }, 1000);
+    setTimeout(() =>{
+      setProgress(100);
+    }, 2000)
+  }, [])
 
   function handleCartClick(item){
     let isItemPresent = false;
@@ -52,6 +63,13 @@ const App = () => {
   }
   return (
     <BrowserRouter>
+    <div>
+      <LoadingBar
+        color='#f11946'
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+      />
+    </div>
       <Navbar size={cart.length} setShowCart={setShowCart} showCart={showCart}/>
       {showCart ? (
         <Cart cart={cart} setCart={setCart} setShowCart={setShowCart} handleChange={handleChange}/>
