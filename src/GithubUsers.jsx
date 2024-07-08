@@ -25,7 +25,7 @@ const GithubUsers = () => {
         return <div>Error: {error.message}</div>;
     }
     if (!data) {
-        return <Loader/>
+        return <div className='min-h-screen grid items-center'><Loader/></div>
     }
 
     const usersToDisplay = searchInput ? searchData?.users : data.users;

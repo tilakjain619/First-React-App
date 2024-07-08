@@ -8,7 +8,7 @@ const Footer = () => {
         <h2>Mini Projects:</h2>
     </div>
         <ul className='flex flex-col gap-1 text-gray-300 text-sm'>
-            <li><Link to="/github-users">Github users</Link></li>
+            <li><Link to="/github-users">Random User</Link></li>
             <li><Link to="/bmi-calculator">BMI Calculator</Link></li>
             <li><Link to="/calculator">Calculator</Link></li>
             <li><Link to="/expense-tracker">Expense Tracker</Link></li>

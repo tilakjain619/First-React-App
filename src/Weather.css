@@ -1,0 +1,30 @@
+.app{
+    background: url('https://images.pexels.com/photos/123022/pexels-photo-123022.jpeg?auto=compress&cs=tinysrgb&w=400');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.warm{
+    background: url('https://images.pexels.com/photos/123022/pexels-photo-123022.jpeg?auto=compress&cs=tinysrgb&w=400');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.cold{
+    background: url('https://images.unsplash.com/photo-1477468572316-36979010099d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sZHxlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+main{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(400px, 95%);
+    height: 250px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}

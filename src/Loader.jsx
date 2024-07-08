@@ -3,7 +3,7 @@ import './Loader.css'
 
 const Loader = () => {
     return (
-        <div className='min-h-[80vh] grid items-center justify-center'>
+        <div className='grid items-center justify-center'>
             <div className="loader">
             </div>
 
