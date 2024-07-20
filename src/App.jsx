@@ -15,6 +15,7 @@ import Cart from './Cart'
 import WeatherApp from './WeatherApp'
 import TodoApp from './TodoApp'
 import Pagination from './Pagination'
+import Practice from './Practice'
 const App = () => {
   const [progress, setProgress] = useState(0);
   const [cart, setCart] = useState([]);
@@ -87,6 +88,7 @@ const App = () => {
           <Route path="/todo" element={<TodoApp/>}></Route>
           <Route path="/weather" element={<WeatherApp/>}></Route>
           <Route path="/pagination" element={<Pagination/>}></Route>
+          <Route path="/practice" element={<Practice/>}></Route>
         </Routes>
       )}
       {warning && <div className='px-4 py-3 bg-red-600 m-2 rounded-md text-gray-200 fixed z-10 top-4 right-4'><span>ℹ️</span> Item is already present</div>}

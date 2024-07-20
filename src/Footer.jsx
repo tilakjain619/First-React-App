@@ -17,6 +17,7 @@ const Footer = () => {
         <ul className='flex flex-col gap-1 text-gray-300 text-sm'>
             <h2 className='font-bold text-md'>Practice:</h2>
             <li><Link to="/pagination">Pagination</Link></li>
+            <li><Link to="/practice">Practice problems</Link></li>
         </ul>
    </footer>
   )
